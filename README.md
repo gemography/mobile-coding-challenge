@@ -1,43 +1,58 @@
 # Mobile Coding Challenge
 
 ## Idea of the App 
-The task is to implement a small app that will list the most starred Github repos that were created in the last 30 days. The data (including the sorting) will be provided by Github API. 
+The task is to implement a small app that will list the most starred Github repos that were created in the last 30 days. 
+You'll be fetching the sorted JSON data directly from the Github API (Github API explained down below). 
 
-## Expected Behavior of the App
+## Features
+* As a User I should be able to list the most starred Github repos that were created in the last 30 days. 
+* As a User I should see the results as a list. One repository per row. 
+* As a User I should be able to see for each repo/row the following details :
+  * Repository name
+  * Repository description 
+  * Numbers of stars for the repo. 
+  * Username and avatar of the owner. 
+* [BONUS] As a User I should be able to keep scrolling and new results should appear (pagination).
 
-* Each row should include the repo name, description and number of stars.
-* The results should be paginated. 
+## Things to keep in mind 🚨
+* Features are less important than code quality. Put more focus on code quality and less on speed and number of features implemented. 
+* Your code will be evaluated based on: code structure, programming best practices, legibility (and not number of features implemented or speed). 
+* The git commit history (and git commit messages) will be also evaluated.
+* Do not forget to craft a simple and clean README. 
 
-## Technologies to use 
-Choose whatever mobile platform you're most familiar with. 
+## How to get the data from Github 
+To get the most starred Github repos created in the last 30 days (relative to 2017-02-01), you'll need to call the following endpoint : 
 
-For iOS, you can use either use Swift or Objective-C. 
+`https://api.github.com/search/repositories?q=created:>2017-01-01&sort=stars&order=desc`
 
-For Android, you can either use Kotlin or Java. 
+The JSON data from Github will be paginated (you'll receive around 100 repos per JSON page). 
 
-## How to get the data from Github API 
-To get the most starred Github repos created in the last 30 days, you should call the following URL :
-
-`https://api.github.com/search/repositories?q=created:>2017-10-01&sort=stars&order=desc`
-
-Keep in mind that the Github API won't be returning all the 28,886 available repos at once (because it's a bad practice), instead the results will be paginated and you will be receiving around 100 repos per page.  
-
-To get the second page for example, you should call the following URL :    
+To get the 2nd page, you add `&page=2` to the end of your API request : 
 
 `https://api.github.com/search/repositories?q=created:>2017-10-01&sort=stars&order=desc&page=2`
+
+To get the 3rd page, you add `&page=3` ... etc
 
 You can read more about the Github API over [here](https://developer.github.com/v3/search/#search-repositories
 ).
 
-## How we'll evaluate
-* Your code will be evaluated based on: code structure, programming best practices, legibility. 
-* The git commit history will be also evaluated.
-* Do not forget documentation. Or how are we going to evaluate your work if we can't init the project on our machines? 
-* Put more focus on code quality and less on speed. Don't hack something quickly, take your time and craft something clean. 
+## Mockups
+![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/mockup.png)
+
+Here's what each element represents : 
+
+![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/row-explained.png)
+
+
+## Technologies to use 
+Choose whatever mobile platform you're most familiar with. 
+
+* For iOS, feel free to use Swift or Objective-C. 
+* For Android, feel free to use Kotlin or Java. 
 
 ## Once you're done with the app 
-* Put the code of your project on Github and send the repo to **zakaria[at]hiddenfounders.com**
+* Put the code of your project on Github and send the repo to **zakaria@hiddenfounders.com**
 
 ## Questions?
-If you have any questions or feedback, don't hesitate to contact us via **zakaria[at]hiddenfounders.com**
+If you have any questions or feedback, don't hesitate to contact us via **zakaria@hiddenfounders.com**
 
