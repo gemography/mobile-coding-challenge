@@ -21,15 +21,15 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
 * Do not forget to craft a simple and clean README. 
 
 ## How to get the data from Github 
-To get the most starred Github repos created in the last 30 days (relative to 2017-02-01), you'll need to call the following endpoint : 
+To get the most starred Github repos created in the last 30 days (relative to 2017-11-22), you'll need to call the following endpoint : 
 
-`https://api.github.com/search/repositories?q=created:>2017-01-01&sort=stars&order=desc`
+`https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc`
 
 The JSON data from Github will be paginated (you'll receive around 100 repos per JSON page). 
 
 To get the 2nd page, you add `&page=2` to the end of your API request : 
 
-`https://api.github.com/search/repositories?q=created:>2017-10-01&sort=stars&order=desc&page=2`
+`https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc&page=2`
 
 To get the 3rd page, you add `&page=3` ... etc
 
