@@ -1,4 +1,4 @@
-# Mobile Coding Challenge
+# Mobile Coding Challenge (Internship)
 
 ## Idea of the App 
 The task is to implement a small app that will list the most starred Github repos that were created in the last 30 days. 
@@ -12,7 +12,6 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
   * Repository description 
   * Numbers of stars for the repo. 
   * Username and avatar of the owner. 
-* [BONUS] As a User I should be able to keep scrolling and new results should appear (pagination).
 
 ## Things to keep in mind 🚨
 * Features are less important than code quality. Put more focus on code quality and less on speed and number of features implemented. 
