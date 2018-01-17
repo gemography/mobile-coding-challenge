@@ -18,6 +18,7 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
 * Features are less important than code quality. Put more focus on code quality and less on speed and number of features implemented. 
 * Your code will be evaluated based on: code structure, programming best practices, legibility (and not number of features implemented or speed). 
 * The git commit history (and git commit messages) will be also evaluated.
+* Upload a pdf file explaining your libraries choice
 * Do not forget to craft a simple and clean README. 
 
 ## How to get the data from Github 
