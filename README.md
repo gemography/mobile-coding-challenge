@@ -18,8 +18,7 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
 * Features are less important than code quality. Put more focus on code quality and less on speed and number of features implemented. 
 * Your code will be evaluated based on: code structure, programming best practices, legibility (and not number of features implemented or speed). 
 * The git commit history (and git commit messages) will be also evaluated.
-* Upload a pdf file explaining your libraries choice
-* Do not forget to craft a simple and clean README. 
+* Do not forget to include few details about the project in the README (e.g explain choice of libraries, how to run it ...) 
 
 ## How to get the data from Github 
 To get the most starred Github repos created in the last 30 days (relative to 2017-11-22), you'll need to call the following endpoint : 
