@@ -51,8 +51,8 @@ Choose whatever mobile platform you're most familiar with.
 * For Android, feel free to use Kotlin or Java. 
 
 ## Once you're done with the app 
-* Put the code of your project on Github and send the repo to **zakaria@hiddenfounders.com**
+* Put the code of your project on Github and send the repo to **zakaria@hiddenfounders.recruitee.com**
 
 ## Questions?
-If you have any questions or feedback, don't hesitate to contact us via **zakaria@hiddenfounders.com**
+If you have any questions or feedback, don't hesitate to contact us via **zakaria@hiddenfounders.recruitee.com**
 
