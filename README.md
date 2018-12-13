@@ -50,9 +50,4 @@ Choose whatever mobile platform you're most familiar with.
 * For iOS, feel free to use Swift or Objective-C. 
 * For Android, feel free to use Kotlin or Java. 
 
-## Once you're done with the app 
-* Put the code of your project on Github and send the repo to **zack@hiddenfounders.recruitee.com**
-
-## Questions?
-If you have any questions or feedback, don't hesitate to contact us via **zack@hiddenfounders.recruitee.com**
 
