@@ -31,8 +31,7 @@ You can read more about the Github API over [here](https://developer.github.com/
 ).
 
 #### Android Gradle
-```groovy
-// Add Dagger dependencies
+```gradle
 dependencies {
     implementation 'androidx.cardview:cardview:1.0.0-beta01'
     implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
@@ -55,11 +54,9 @@ This project is mantained by:
 * [Mohammed Labied](https://github.com/simolabsoft)
 
 ## Mockups
-![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/mockup.png)
+![alt text](https://raw.githubusercontent.com/simolabsoft/mobile-coding-challenge/master/image.png)
 
-Here's what each element represents : 
 
-![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/row-explained.png)
 
 
 ## Technologies used
