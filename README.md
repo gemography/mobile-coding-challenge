@@ -1,7 +1,7 @@
-# Mobile Coding Challenge
+# # Android TrendingRepos
 
 ## Idea of the App 
-The task is to implement a small app that will list the most starred Github repos that were created in the last 30 days. 
+A small app that will list the most starred Github repos that were created in the last 30 days. 
 You'll be fetching the sorted JSON data directly from the Github API (Github API explained down below). 
 
 ## Features
@@ -13,12 +13,6 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
   * Numbers of stars for the repo. 
   * Username and avatar of the owner. 
 * [BONUS] As a User I should be able to keep scrolling and new results should appear (pagination).
-
-## Things to keep in mind 🚨
-* Features are less important than code quality. Put more focus on code quality and less on speed and number of features implemented. 
-* Your code will be evaluated based on: code structure, programming best practices, legibility (and not number of features implemented or speed). 
-* The git commit history (and git commit messages) will be also evaluated.
-* Do not forget to include few details about the project in the README (e.g explain choice of libraries, how to run it ...) 
 
 ## How to get the data from Github 
 To get the most starred Github repos created in the last 30 days (relative to 2017-11-22), you'll need to call the following endpoint : 
@@ -36,6 +30,30 @@ To get the 3rd page, you add `&page=3` ... etc
 You can read more about the Github API over [here](https://developer.github.com/v3/search/#search-repositories
 ).
 
+#### Android Gradle
+```groovy
+// Add Dagger dependencies
+dependencies {
+    implementation 'androidx.cardview:cardview:1.0.0-beta01'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+}
+```
+
+## Installation
+Clone this repository and import into **Android Studio**
+```bash
+git clone git@github.com:simolabsoft/mobile-coding-challenge.git
+```
+## Build variants
+Use the Android Studio *Build Variants* button to choose between **production** and **staging** flavors combined with debug and release build types
+
+## Maintainers
+This project is mantained by:
+* [United Remote](https://github.com/hiddenfounders)
+* [Mohammed Labied](https://github.com/simolabsoft)
+
 ## Mockups
 ![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/mockup.png)
 
@@ -44,10 +62,11 @@ Here's what each element represents :
 ![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/row-explained.png)
 
 
-## Technologies to use 
-Choose whatever mobile platform you're most familiar with. 
+## Technologies used
+- Java 
+- android SDk
+- picasso Lib
+- Volley Lib
 
-* For iOS, feel free to use Swift or Objective-C. 
-* For Android, feel free to use Kotlin or Java. 
 
 
