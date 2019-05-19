@@ -75,6 +75,6 @@ public class Trending extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        
+
     }
 }
