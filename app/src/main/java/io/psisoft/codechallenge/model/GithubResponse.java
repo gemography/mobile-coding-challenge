@@ -1,44 +1,52 @@
 package io.psisoft.codechallenge.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class GithubResponse {
 
-    private int total_count;
-    private boolean incomplete_results;
-    private List<GithubResponse> items;
+    @SerializedName("total_count")
+    @Expose
+    private int totalCount;
+
+    @SerializedName("incomplete_results")
+    @Expose
+    private boolean incompleteResults;
+
+    private List<GithubRepository> items;
 
 
     // Constructor
-    public GithubResponse(int total_count, boolean incomplete_results, List<GithubResponse> items) {
-        this.total_count = total_count;
-        this.incomplete_results = incomplete_results;
+    public GithubResponse(int totalCount, boolean incompleteResults, List<GithubRepository> items) {
+        this.totalCount = totalCount;
+        this.incompleteResults = incompleteResults;
         this.items = items;
     }
 
     // Getters and Setters
-    public int getTotal_count() {
-        return total_count;
+    public int getTotalCount() {
+        return totalCount;
     }
 
-    public void setTotal_count(int total_count) {
-        this.total_count = total_count;
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
     }
 
-    public boolean isIncomplete_results() {
-        return incomplete_results;
+    public boolean isIncompleteResults() {
+        return incompleteResults;
     }
 
-    public void setIncomplete_results(boolean incomplete_results) {
-        this.incomplete_results = incomplete_results;
+    public void setIncompleteResults(boolean incompleteResults) {
+        this.incompleteResults = incompleteResults;
     }
 
-    public List<GithubResponse> getItems() {
+    public List<GithubRepository> getItems() {
         return items;
     }
 
-    public void setItems(List<GithubResponse> items) {
+    public void setItems(List<GithubRepository> items) {
         this.items = items;
     }
-
 }

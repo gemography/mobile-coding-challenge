@@ -3,14 +3,14 @@
 
     <!--Trending Menu Item-->
     <item
-        android:id="@+id/feed"
+        android:id="@+id/trending"
         android:icon="@drawable/ic_star"
-        android:title="Trending"/>
+        android:title="@string/trend_item"/>
 
     <!--Setting Menu Item-->
     <item
         android:id="@+id/setting"
         android:icon="@drawable/ic_settings"
-        android:title="Settings"/>
+        android:title="@string/setting_item"/>
 
 </menu>

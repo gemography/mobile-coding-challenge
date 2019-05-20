@@ -1,6 +1,7 @@
 package io.psisoft.codechallenge.model;
 
-import java.util.Objects;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class GithubRepository {
 
@@ -8,16 +9,19 @@ public class GithubRepository {
     private String name;
     private String description;
     private GithubRepositoryOwner owner;
-    private int score;
+
+    @SerializedName("stargazers_count")
+    @Expose
+    private int stargazersCount;
 
 
     // Constructor
-    public GithubRepository(int id, String name, String description, GithubRepositoryOwner owner, int score) {
+    public GithubRepository(int id, String name, String description, GithubRepositoryOwner owner, int stargazersCount) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.owner = owner;
-        this.score = score;
+        this.stargazersCount = stargazersCount;
     }
 
     // Getters and Setters
@@ -53,12 +57,12 @@ public class GithubRepository {
         this.owner = owner;
     }
 
-    public int getScore() {
-        return score;
+    public int getStargazersCount() {
+        return stargazersCount;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setStargazersCount(int stargazersCount) {
+        this.stargazersCount = stargazersCount;
     }
 
 

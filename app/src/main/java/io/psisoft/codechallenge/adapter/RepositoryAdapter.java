@@ -12,7 +12,7 @@ import io.psisoft.codechallenge.model.GithubRepository;
 
 public class RepositoryAdapter extends PagedListAdapter<GithubRepository, RepositoryViewHolder> {
 
-    private RepositoryAdapter() {
+    public RepositoryAdapter() {
         super(DIFF_CALLBACK);
     }
 
@@ -20,7 +20,8 @@ public class RepositoryAdapter extends PagedListAdapter<GithubRepository, Reposi
             new DiffUtil.ItemCallback<GithubRepository>() {
 
                 @Override
-                public boolean areItemsTheSame(GithubRepository oldGithubRepository, GithubRepository newGithubRepository) {
+                public boolean areItemsTheSame(GithubRepository oldGithubRepository,
+                                               GithubRepository newGithubRepository) {
                     return oldGithubRepository.getId() == newGithubRepository.getId();
                 }
 
@@ -35,7 +36,9 @@ public class RepositoryAdapter extends PagedListAdapter<GithubRepository, Reposi
     @NonNull
     @Override
     public RepositoryViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.repository_item_view, viewGroup, false);
+        // Inflate the item repository view
+        View view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.repository_item_view, viewGroup, false);
         return new RepositoryViewHolder(view);
     }
 
@@ -44,11 +47,9 @@ public class RepositoryAdapter extends PagedListAdapter<GithubRepository, Reposi
 
         GithubRepository item = getItem(i);
 
-        if(item != null) {
+        if (item != null) {
+            // Bind data into the view holder
             repositoryViewHolder.bindData(item);
-        }else{
-            // TODO: make an action here
         }
-
     }
 }
