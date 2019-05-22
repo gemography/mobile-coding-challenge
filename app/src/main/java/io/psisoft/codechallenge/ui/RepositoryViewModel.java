@@ -1,25 +1,36 @@
 package io.psisoft.codechallenge.ui;
 
+import android.arch.core.util.Function;
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModel;
 import android.arch.paging.LivePagedListBuilder;
-import android.arch.paging.PageKeyedDataSource;
 import android.arch.paging.PagedList;
 
+import io.psisoft.codechallenge.api.NetworkState;
 import io.psisoft.codechallenge.model.GithubRepository;
-import io.psisoft.codechallenge.util.RepositoryDataSourceFactory;
+import io.psisoft.codechallenge.utils.RepositoryDataSource;
+import io.psisoft.codechallenge.utils.RepositoryDataSourceFactory;
 
 public class RepositoryViewModel extends ViewModel {
 
-    LiveData<PagedList<GithubRepository>> itemPagedList;
-    LiveData<PageKeyedDataSource<Integer, GithubRepository>> liveDataSource;
+    private LiveData<PagedList<GithubRepository>> itemPagedList;
+    private LiveData<RepositoryDataSource> myDataSource;
+    private LiveData<NetworkState> networkState;
 
     private static final int PAGE_SIZE = 30;
 
     public RepositoryViewModel() {
+        init();
+    }
+
+    public void init() {
 
         RepositoryDataSourceFactory itemDataSourceFactory = new RepositoryDataSourceFactory();
-        liveDataSource = itemDataSourceFactory.getItemLiveDataSource();
+        myDataSource = itemDataSourceFactory.getItemLiveDataSource();
+
+        networkState = Transformations.switchMap(myDataSource,
+                (Function<RepositoryDataSource, LiveData<NetworkState>>) RepositoryDataSource::getNetworkState);
 
         PagedList.Config config =
                 (new PagedList.Config.Builder())
@@ -29,5 +40,14 @@ public class RepositoryViewModel extends ViewModel {
 
         itemPagedList = (new LivePagedListBuilder(itemDataSourceFactory, config)).build();
 
+
+    }
+
+    public LiveData<PagedList<GithubRepository>> getItemPagedList() {
+        return itemPagedList;
+    }
+
+    public LiveData<NetworkState> getNetworkState() {
+        return networkState;
     }
 }

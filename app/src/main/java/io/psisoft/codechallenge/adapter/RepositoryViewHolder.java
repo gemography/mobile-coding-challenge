@@ -63,6 +63,7 @@ public class RepositoryViewHolder extends RecyclerView.ViewHolder {
         Glide.with(context)
                 .load(githubRepository.getOwner().getAvatar_url())
                 .centerCrop()
+                .placeholder(R.drawable.ic_image_placeholder)
                 .into(ownerImage);
     }
 

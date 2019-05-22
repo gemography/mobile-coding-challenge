@@ -11,7 +11,7 @@ public interface ApiHelper {
      * Get github repositories from API.
      *
      * @param order desc or asc order
-     * @param sort  sorted attribute
+     * @param sort  sorting attribute
      * @param createdDate page size
      * @param page page number
      *
