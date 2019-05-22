@@ -44,10 +44,16 @@ Here's what each element represents :
 ![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/row-explained.png)
 
 
-## Technologies to use 
-Choose whatever mobile platform you're most familiar with. 
+## Technologies
+For this project, I still stuck to the Android Jetpack libraries:
 
-* For iOS, feel free to use Swift or Objective-C. 
-* For Android, feel free to use Kotlin or Java. 
+* Butter Knife --> Viewbinding library for android.
+* Retrofit -->  REST client library for android, it makes it easy to retrieve JSON data via API.
+* Paging library -->  Facilitates loading data  from network data source on-demand, and also allows the app to work with large data sets.
+* ViewModel library --> Stores and manages UI-related data in a lifecycle conscious way.
+* Glide --> Used for loading images efficiently.
 
+
+## How to run project
+Follow the indications on the Google Developpers Doc [here](https://developer.android.com/training/basics/firstapp/running-app).
 
