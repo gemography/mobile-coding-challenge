@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Code Challenge</string>
+
+    <string name="default_toolbar_title">Trending Rpo</string>
+    <string name="trend_item">Trending</string>
+    <string name="setting_item">Settings</string>
+
+    <!--Text on UI-->
+    <string name="setting_text_ui">Under Constructions. Not yet available!</string>
+
+</resources>
