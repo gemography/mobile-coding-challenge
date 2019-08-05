@@ -1,0 +1,6 @@
+#networking
+github "Alamofire/Alamofire"
+github "Alamofire/AlamofireImage" ~> 3.5
+
+#json mapping
+github "bignerdranch/Freddy" ~> 3.0
