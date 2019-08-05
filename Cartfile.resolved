@@ -1,0 +1,3 @@
+github "Alamofire/Alamofire" "4.8.2"
+github "Alamofire/AlamofireImage" "3.5.2"
+github "bignerdranch/Freddy" "3.0.3"
