@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
     fun getQueryString(page: Int = 1) : String {
         val date = Calendar.getInstance()
-        date.add(Calendar.DATE, -1)
+        date.add(Calendar.DATE, -30)
 
         val formatter = SimpleDateFormat("yyyy-MM-dd")
         val thirtyDaysBeforeTodayInString = formatter.format(date)

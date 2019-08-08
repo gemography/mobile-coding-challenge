@@ -41,19 +41,6 @@ class GitHubRepoRecycleAdapter(val context: Context, var gitHubRepo: MutableList
         }
     }
 
-    fun formatPoints(number: Double) : String {
-        var numberString = ""
-        if (Math.abs(number / 1000000) > 1) {
-            numberString = (number / 1000000).toString() + "m"
-
-        } else if (Math.abs(number / 1000) > 1) {
-            numberString = (number / 1000).toString() + "k"
-
-        } else {
-            numberString = number.toString()
-        }
-        return numberString
-    }
 
     fun setData(items: List<Items>) {
         this.gitHubRepo = items.toMutableList()
@@ -63,6 +50,21 @@ class GitHubRepoRecycleAdapter(val context: Context, var gitHubRepo: MutableList
     fun addMoreData(items: List<Items>) {
         this.gitHubRepo.addAll(items)
         notifyDataSetChanged()
+    }
+
+    // Helper Methods
+    fun formatPoints(number: Double) : String {
+        var numberString = ""
+        if (Math.abs(number / 1000000) > 1) {
+            numberString = String.format("%.1fm",(number / 1000000))
+
+        } else if (Math.abs(number / 1000) > 1) {
+            numberString = String.format("%.1fk",(number / 1000))
+
+        } else {
+            numberString = number.toString()
+        }
+        return numberString
     }
 
 }
