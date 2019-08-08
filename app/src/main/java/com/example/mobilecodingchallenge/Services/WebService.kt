@@ -14,6 +14,9 @@ object WebService {
             endpoint = endpoint,
             listener = Response.Listener { response ->
                 val repo = response
+                if (repo.totalCounts == null || repo.totalCounts == 0) {
+                    failure("No Records Available")
+                }
                 completion(repo)
             },
             errorListener = Response.ErrorListener { error ->

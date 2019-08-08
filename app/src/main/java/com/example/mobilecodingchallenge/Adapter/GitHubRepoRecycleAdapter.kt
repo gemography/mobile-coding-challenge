@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class GitHubRepoRecycleAdapter(val context: Context, val gitHubRepo: List<Items>) : RecyclerView.Adapter<GitHubRepoRecycleAdapter.Holder>() {
+class GitHubRepoRecycleAdapter(val context: Context, var gitHubRepo: MutableList<Items>) : RecyclerView.Adapter<GitHubRepoRecycleAdapter.Holder>() {
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.bindItems(gitHubRepo[position],context)
@@ -53,6 +53,16 @@ class GitHubRepoRecycleAdapter(val context: Context, val gitHubRepo: List<Items>
             numberString = number.toString()
         }
         return numberString
+    }
+
+    fun setData(items: List<Items>) {
+        this.gitHubRepo = items.toMutableList()
+        notifyDataSetChanged()
+    }
+
+    fun addMoreData(items: List<Items>) {
+        this.gitHubRepo.addAll(items)
+        notifyDataSetChanged()
     }
 
 }
