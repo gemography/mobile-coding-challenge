@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mobile Coding Challenge</string>
+    <string name="trending_repos">Trending Repos</string>
+    <string name="repo_name">Repo Name</string>
+    <string name="repo_description">Repo Description</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="_0k">0K</string>
+    <string name="star_image">Star Image</string>
+    <string name="avatar">Avatar</string>
+</resources>
