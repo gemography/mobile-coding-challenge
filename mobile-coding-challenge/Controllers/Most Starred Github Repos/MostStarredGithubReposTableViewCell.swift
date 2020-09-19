@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MostStarredGithubReposTableViewCell: UITableViewCell {
     
@@ -73,6 +74,17 @@ class MostStarredGithubReposTableViewCell: UITableViewCell {
         self.repositoryDescriptionLabel.text   = repositoryDescription
         self.repositoryOwnerNameLabel.text     = repositoryOwnerName
         self.repositoryNumberOfStarsLabel.text = repositoryNumberOfStars
+        
+        if let _ = repositoryOwnerImageLink{
+            self.repositoryOwnerImageView.kf.setImage(with: repositoryOwnerImageLink!)
+        }
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.repositoryOwnerImageView.image = #imageLiteral(resourceName: "empty-avatar-icon")
         
     }
 

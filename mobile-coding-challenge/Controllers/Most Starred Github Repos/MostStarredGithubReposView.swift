@@ -40,10 +40,14 @@ class MostStarredGithubReposView: MostStarredGithubReposUI, PresenterToMostStarr
         self.mostStarredReposTableView.separatorStyle = .singleLine
         self.loadingIndicatorView.stopAnimating()
         self.refreshControl.endRefreshing()
+        self.mostStarredReposTableView.tableFooterView = nil
     }
     
     func showResponseError(){
-        self.showAlert(title: "errors.something_went_wrong".localized, message: "mostStarredGithubRepos.errors.while_fetching_for_repos_description".localized)
+        self.loadingIndicatorView.stopAnimating()
+        self.refreshControl.endRefreshing()
+        self.mostStarredReposTableView.tableFooterView = nil
+        self.showSimpleAlert(title: "errors.something_went_wrong".localized, message: "mostStarredGithubRepos.errors.while_fetching_for_repos_description".localized)
     }
     
     @objc
@@ -59,6 +63,44 @@ extension MostStarredGithubReposView: UITableViewDataSource, UITableViewDelegate
         return self.presenter.mostStarredGithubRepos.count
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == self.presenter.mostStarredGithubRepos.count - 1 {
+        
+            let totalNumberOfMostStarredGithubRepos = self.presenter.totalNumberOfMostStarredGithubRepos
+            
+            if totalNumberOfMostStarredGithubRepos != -1 && totalNumberOfMostStarredGithubRepos ?? -1 > self.presenter.mostStarredGithubRepos.count{
+                
+                let _view = UIView(
+                    frame: .init(
+                        x: 0,
+                        y: 0,
+                        width: tableView.contentSize.width,
+                        height: 40
+                    )
+                )
+                
+                let indicatorView = UIActivityIndicatorView(frame: .init(
+                        x: _view.frame.width / 2,
+                        y: _view.frame.height / 2,
+                        width: 20,
+                        height: 20
+                    )
+                )
+                
+                indicatorView.startAnimating()
+                _view.addSubview(indicatorView)
+                
+                self.mostStarredReposTableView.tableFooterView = _view
+                
+                self.presenter.interactor.getMostStarredGithubRepos(from: self.presenter.activePage, isToUsePullRefresh: false)
+                
+            }
+            
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let mostStarredGithubReposCell = tableView.dequeueReusableCell(withIdentifier: "\(MostStarredGithubReposTableViewCell.self)", for: indexPath) as! MostStarredGithubReposTableViewCell
@@ -72,18 +114,6 @@ extension MostStarredGithubReposView: UITableViewDataSource, UITableViewDelegate
             repositoryOwnerName: mostStarredGithubRepo.getOwnerName(),
             repositoryNumberOfStars: mostStarredGithubRepo.getShortNumberOfStars()
         )
-        
-        if indexPath.row == self.presenter.mostStarredGithubRepos.count - 1 {
-        
-            let totalNumberOfMostStarredGithubRepos = self.presenter.totalNumberOfMostStarredGithubRepos
-            
-            if totalNumberOfMostStarredGithubRepos != -1 && totalNumberOfMostStarredGithubRepos ?? -1 > self.presenter.mostStarredGithubRepos.count{
-                
-                self.presenter.interactor.getMostStarredGithubRepos(from: self.presenter.activePage, isToUsePullRefresh: false)
-                
-            }
-            
-        }
         
         return mostStarredGithubReposCell
         

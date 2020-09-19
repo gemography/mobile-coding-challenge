@@ -68,6 +68,10 @@ extension GithubRepositoryEntity{
                 self.description = description
             }
             
+            if let avatarStringURL = ownerObject?["avatar_url"] as? String{
+                self.ownerImageLink = avatarStringURL
+            }
+            
             return
             
         }

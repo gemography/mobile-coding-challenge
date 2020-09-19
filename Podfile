@@ -8,6 +8,7 @@ target 'mobile-coding-challenge' do
   # Pods for mobile-coding-challenge
   pod 'Moya'
   pod 'SwiftyJSON'
+  pod 'Kingfisher'
 
 
 end
