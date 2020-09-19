@@ -19,6 +19,8 @@ class MostStarredGithubReposView: MostStarredGithubReposUI, PresenterToMostStarr
         self.mostStarredReposTableView.delegate   = self
         self.mostStarredReposTableView.register(MostStarredGithubReposTableViewCell.self, forCellReuseIdentifier: "\(MostStarredGithubReposTableViewCell.self)")
         
+        self.refreshControl.addTarget(self, action: #selector(self.refreshMostStarredGithubReposData), for: .valueChanged)
+        
         self.presenter.viewDidLoad()
         
     }
@@ -37,10 +39,16 @@ class MostStarredGithubReposView: MostStarredGithubReposUI, PresenterToMostStarr
         self.mostStarredReposTableView.isUserInteractionEnabled = true
         self.mostStarredReposTableView.separatorStyle = .singleLine
         self.loadingIndicatorView.stopAnimating()
+        self.refreshControl.endRefreshing()
     }
     
     func showResponseError(){
         self.showAlert(title: "errors.something_went_wrong".localized, message: "mostStarredGithubRepos.errors.while_fetching_for_repos_description".localized)
+    }
+    
+    @objc
+    func refreshMostStarredGithubReposData(){
+        self.presenter.interactor.getMostStarredGithubRepos(from: 1, isToUsePullRefresh: true)
     }
     
 }

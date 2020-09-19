@@ -31,14 +31,19 @@ class MostStarredGithubReposPresenter: ViewToMostStarredGithubReposPresenterProt
         
         self.mostStarredGithubRepos = []
         self.view.showLoader()
-        self.interactor.getMostStarredGithubRepos()
+        self.interactor.getMostStarredGithubRepos(from: 1, isToUsePullRefresh: false)
         
     }
     
-    func mostStarredGithubReposSuccessFetch(repos: [GithubRepositoryEntity]) {
+    func mostStarredGithubReposSuccessFetch(repos: [GithubRepositoryEntity], isToUsePullRefresh: Bool) {
+        
+        if isToUsePullRefresh{
+            self.mostStarredGithubRepos = repos
+        }else{
+            self.mostStarredGithubRepos.append(contentsOf: repos)
+        }
         
         self.view.hideLoader()
-        self.mostStarredGithubRepos = repos
         self.view.reloadData()
         
     }

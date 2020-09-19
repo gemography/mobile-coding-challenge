@@ -16,7 +16,7 @@ class GithubRepositoryEntity{
     private var description       : String?
     private var ownerImageLink    : String?
     private var ownerName         : String!
-    private var numberOfStars     : Int?
+    private var numberOfStars     : Int!
     private var shortNumberOfStars: String?
     
     func getId() -> Int{ return self.id }
@@ -34,7 +34,7 @@ class GithubRepositoryEntity{
     
     func getOwnerName()->String{ return self.ownerName }
     
-    func getNumberOfStars()->Int{ return self.numberOfStars ?? 0 }
+    func getNumberOfStars()->Int{ return self.numberOfStars }
     
     func getShortNumberOfStars()->String{ return self.shortNumberOfStars ?? "" }
     
@@ -49,36 +49,30 @@ class GithubRepositoryEntity{
 
 extension GithubRepositoryEntity{
     
-    convenience init(id: Int, name: String, description: String, ownerName: String, numberOfStars: Int) {
+    convenience init?(from repoJSON: JSON){
         self.init()
         
-        self.id            = id
-        self.name          = name
-        self.description   = description
-        self.ownerName     = ownerName
-        self.setNumberOfStars(numberOfStars: numberOfStars)
+        let ownerObject = repoJSON["owner"].dictionaryObject
         
-    }
-    
-    static func getFakeData() -> [GithubRepositoryEntity]{
-        
-        var githubRepos: [GithubRepositoryEntity] = []
-        
-        for i in 0..<100 {
+        if  let repoId        = repoJSON["id"].int,
+            let repoName      = repoJSON["name"].string,
+            let ownerName     = ownerObject?["login"] as? String,
+            let numberOfStars = repoJSON["stargazers_count"].int{
             
-            githubRepos.append(
-                .init(
-                    id: i,
-                    name: "Repository number \(i)",
-                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                    ownerName: "Owner number \(i)",
-                    numberOfStars: i * 100000
-                )
-            )
+            self.id            = repoId
+            self.name          = repoName
+            self.ownerName     = ownerName
+            self.setNumberOfStars(numberOfStars: numberOfStars)
+            
+            if let description = repoJSON["description"].string{
+                self.description = description
+            }
+            
+            return
             
         }
         
-        return githubRepos
+        return nil
         
     }
     

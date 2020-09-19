@@ -6,19 +6,55 @@
 //  Copyright © 2020 Zakariae. All rights reserved.
 //
 
-import Foundation
+import Moya
+import SwiftyJSON
 
 class MostStarredGithubReposInteractor: PresenterToMostStarredGithubReposInteractorProtocol{
     
     var presenter: InteractorToMostStarredGithubReposPresenterProtocol!
     
-    func getMostStarredGithubRepos() {
+    func getMostStarredGithubRepos(from page: Int, isToUsePullRefresh: Bool) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        let requestHandler = MoyaProvider<RequestHandler>()
+        
+        if let previousMonthDate    = Calendar.current.date(byAdding: .month, value: -1, to: Date()){
+        
+            requestHandler.request(.getMostGithubRepos(created_at: previousMonthDate.formattedDate(using: "YYYY-MM-dd"), page: page)){ result in
             
-            self.presenter.mostStarredGithubReposSuccessFetch(repos: GithubRepositoryEntity.getFakeData())
+            switch result {
+                case let .success(moyaResponse):
+                    
+                    var mostStarredGithubRepos: [GithubRepositoryEntity] = []
+                    
+                    if let _mostStarredGithubRepos = JSON(moyaResponse.data)["items"].array{
+                        
+                        for _mostStarredGithubRepo in _mostStarredGithubRepos{
+                            
+                            if let mostStarredGithubRepo = GithubRepositoryEntity(from: _mostStarredGithubRepo){
+                                
+                                mostStarredGithubRepos.append(mostStarredGithubRepo)
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                
+                    self.presenter.mostStarredGithubReposSuccessFetch(repos: mostStarredGithubRepos, isToUsePullRefresh: isToUsePullRefresh)
+                
+                
+                default:
+                    
+                    self.presenter.mostStarredGithubReposSuccessFailure()
+                
+            }
+        }
+            
+            return
             
         }
+        
+        self.presenter.mostStarredGithubReposSuccessFailure()
         
     }
     

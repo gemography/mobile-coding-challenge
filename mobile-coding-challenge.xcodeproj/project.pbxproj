@@ -23,6 +23,8 @@
 		75620E70251677C200F87394 /* MostStarredGithubReposEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E592516562600F87394 /* MostStarredGithubReposEntity.swift */; };
 		75620E722516895A00F87394 /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E712516895A00F87394 /* Int + Extension.swift */; };
 		75620E742516987F00F87394 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E732516987F00F87394 /* String + Extension.swift */; };
+		75620E772516A8B800F87394 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E762516A8B800F87394 /* RequestHandler.swift */; };
+		75620E7A2516B5DF00F87394 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E782516B58B00F87394 /* Date + Extension.swift */; };
 		7F2954C3013C6DFD1EB57D67 /* Pods_mobile_coding_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57D743DE22E5A3A3F84BF3F /* Pods_mobile_coding_challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		75620E6725166EB800F87394 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		75620E712516895A00F87394 /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
 		75620E732516987F00F87394 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		75620E762516A8B800F87394 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		75620E782516B58B00F87394 /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		F57D743DE22E5A3A3F84BF3F /* Pods_mobile_coding_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mobile_coding_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,7 @@
 				75620E64251660A800F87394 /* Localizable Files */,
 				75620E6625166E8D00F87394 /* Controllers */,
 				75620E6525166E7A00F87394 /* Extensions */,
+				75620E752516A8A500F87394 /* Helpers */,
 				75620E3A2516548300F87394 /* AppDelegate.swift */,
 				75620E432516548700F87394 /* Assets.xcassets */,
 				75620E452516548700F87394 /* LaunchScreen.storyboard */,
@@ -131,6 +136,7 @@
 				75620E6725166EB800F87394 /* UIViewController + Extension.swift */,
 				75620E712516895A00F87394 /* Int + Extension.swift */,
 				75620E732516987F00F87394 /* String + Extension.swift */,
+				75620E782516B58B00F87394 /* Date + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +148,14 @@
 				75620E4E2516557900F87394 /* Most Starred Github Repos */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		75620E752516A8A500F87394 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				75620E762516A8B800F87394 /* RequestHandler.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		958ADBB33EB7D44312ABB616 /* Pods */ = {
@@ -276,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75620E772516A8B800F87394 /* RequestHandler.swift in Sources */,
 				75620E6C251670E400F87394 /* MostStarredGithubReposRouter.swift in Sources */,
 				75620E70251677C200F87394 /* MostStarredGithubReposEntity.swift in Sources */,
 				75620E6825166EB800F87394 /* UIViewController + Extension.swift in Sources */,
@@ -283,6 +298,7 @@
 				75620E5F251659B700F87394 /* BaseUINavigationController.swift in Sources */,
 				75620E6B25166FE300F87394 /* MostStarredGithubReposUI.swift in Sources */,
 				75620E6E251671BF00F87394 /* MostStarredGithubReposInteractor.swift in Sources */,
+				75620E7A2516B5DF00F87394 /* Date + Extension.swift in Sources */,
 				75620E722516895A00F87394 /* Int + Extension.swift in Sources */,
 				75620E6925166F1300F87394 /* MostStarredGithubReposPresenter.swift in Sources */,
 				75620E3B2516548300F87394 /* AppDelegate.swift in Sources */,

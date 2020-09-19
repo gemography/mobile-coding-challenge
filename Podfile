@@ -6,7 +6,7 @@ target 'mobile-coding-challenge' do
   use_frameworks!
 
   # Pods for mobile-coding-challenge
-  pod 'Alamofire'
+  pod 'Moya'
   pod 'SwiftyJSON'
 
 

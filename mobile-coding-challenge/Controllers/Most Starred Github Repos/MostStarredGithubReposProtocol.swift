@@ -14,6 +14,7 @@ protocol PresenterToMostStarredGithubReposViewProtocol: class{
     func hideLoader()
     func showResponseError()
     func reloadData()
+    func refreshMostStarredGithubReposData()
 }
 
 protocol ViewToMostStarredGithubReposPresenterProtocol{
@@ -27,11 +28,11 @@ protocol ViewToMostStarredGithubReposPresenterProtocol{
 
 protocol PresenterToMostStarredGithubReposInteractorProtocol{
     var presenter: InteractorToMostStarredGithubReposPresenterProtocol! { get set }
-    func getMostStarredGithubRepos()
+    func getMostStarredGithubRepos(from page: Int, isToUsePullRefresh: Bool)
 }
 
 protocol InteractorToMostStarredGithubReposPresenterProtocol{
-    func mostStarredGithubReposSuccessFetch(repos: [GithubRepositoryEntity])
+    func mostStarredGithubReposSuccessFetch(repos: [GithubRepositoryEntity], isToUsePullRefresh: Bool)
     func mostStarredGithubReposSuccessFailure()
 }
 
