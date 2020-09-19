@@ -10,6 +10,14 @@
 		75620E3B2516548300F87394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E3A2516548300F87394 /* AppDelegate.swift */; };
 		75620E442516548700F87394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75620E432516548700F87394 /* Assets.xcassets */; };
 		75620E472516548700F87394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75620E452516548700F87394 /* LaunchScreen.storyboard */; };
+		75620E50251655BC00F87394 /* MostStarredGithubReposUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E4F251655BC00F87394 /* MostStarredGithubReposUI.swift */; };
+		75620E52251655D000F87394 /* MostStarredGithubReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E51251655D000F87394 /* MostStarredGithubReposView.swift */; };
+		75620E54251655E400F87394 /* MostStarredGithubReposProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E53251655E400F87394 /* MostStarredGithubReposProtocol.swift */; };
+		75620E56251655FF00F87394 /* MostStarredGithubReposInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E55251655FF00F87394 /* MostStarredGithubReposInteractor.swift */; };
+		75620E582516561800F87394 /* MostStarredGithubReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E572516561800F87394 /* MostStarredGithubReposPresenter.swift */; };
+		75620E5A2516562600F87394 /* MostStarredGithubReposEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E592516562600F87394 /* MostStarredGithubReposEntity.swift */; };
+		75620E5C2516563100F87394 /* MostStarredGithubReposRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E5B2516563100F87394 /* MostStarredGithubReposRouter.swift */; };
+		75620E5F251659B700F87394 /* BaseUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E5E251659B700F87394 /* BaseUINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +26,14 @@
 		75620E432516548700F87394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75620E462516548700F87394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75620E482516548700F87394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75620E4F251655BC00F87394 /* MostStarredGithubReposUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposUI.swift; sourceTree = "<group>"; };
+		75620E51251655D000F87394 /* MostStarredGithubReposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposView.swift; sourceTree = "<group>"; };
+		75620E53251655E400F87394 /* MostStarredGithubReposProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposProtocol.swift; sourceTree = "<group>"; };
+		75620E55251655FF00F87394 /* MostStarredGithubReposInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposInteractor.swift; sourceTree = "<group>"; };
+		75620E572516561800F87394 /* MostStarredGithubReposPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposPresenter.swift; sourceTree = "<group>"; };
+		75620E592516562600F87394 /* MostStarredGithubReposEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposEntity.swift; sourceTree = "<group>"; };
+		75620E5B2516563100F87394 /* MostStarredGithubReposRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposRouter.swift; sourceTree = "<group>"; };
+		75620E5E251659B700F87394 /* BaseUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +66,36 @@
 		75620E392516548300F87394 /* mobile-coding-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				75620E5D2516597800F87394 /* Base Controllers */,
+				75620E4E2516557900F87394 /* Most Starred Github Repos */,
 				75620E3A2516548300F87394 /* AppDelegate.swift */,
 				75620E432516548700F87394 /* Assets.xcassets */,
 				75620E452516548700F87394 /* LaunchScreen.storyboard */,
 				75620E482516548700F87394 /* Info.plist */,
 			);
 			path = "mobile-coding-challenge";
+			sourceTree = "<group>";
+		};
+		75620E4E2516557900F87394 /* Most Starred Github Repos */ = {
+			isa = PBXGroup;
+			children = (
+				75620E4F251655BC00F87394 /* MostStarredGithubReposUI.swift */,
+				75620E51251655D000F87394 /* MostStarredGithubReposView.swift */,
+				75620E53251655E400F87394 /* MostStarredGithubReposProtocol.swift */,
+				75620E55251655FF00F87394 /* MostStarredGithubReposInteractor.swift */,
+				75620E572516561800F87394 /* MostStarredGithubReposPresenter.swift */,
+				75620E592516562600F87394 /* MostStarredGithubReposEntity.swift */,
+				75620E5B2516563100F87394 /* MostStarredGithubReposRouter.swift */,
+			);
+			path = "Most Starred Github Repos";
+			sourceTree = "<group>";
+		};
+		75620E5D2516597800F87394 /* Base Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75620E5E251659B700F87394 /* BaseUINavigationController.swift */,
+			);
+			path = "Base Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75620E52251655D000F87394 /* MostStarredGithubReposView.swift in Sources */,
+				75620E54251655E400F87394 /* MostStarredGithubReposProtocol.swift in Sources */,
+				75620E5C2516563100F87394 /* MostStarredGithubReposRouter.swift in Sources */,
+				75620E5F251659B700F87394 /* BaseUINavigationController.swift in Sources */,
+				75620E5A2516562600F87394 /* MostStarredGithubReposEntity.swift in Sources */,
+				75620E582516561800F87394 /* MostStarredGithubReposPresenter.swift in Sources */,
+				75620E56251655FF00F87394 /* MostStarredGithubReposInteractor.swift in Sources */,
 				75620E3B2516548300F87394 /* AppDelegate.swift in Sources */,
+				75620E50251655BC00F87394 /* MostStarredGithubReposUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
