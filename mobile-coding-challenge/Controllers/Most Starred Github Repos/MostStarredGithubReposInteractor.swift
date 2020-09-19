@@ -24,9 +24,15 @@ class MostStarredGithubReposInteractor: PresenterToMostStarredGithubReposInterac
             switch result {
                 case let .success(moyaResponse):
                     
-                    var mostStarredGithubRepos: [GithubRepositoryEntity] = []
+                    let responseJSON = JSON(moyaResponse.data)
                     
-                    if let _mostStarredGithubRepos = JSON(moyaResponse.data)["items"].array{
+                    var mostStarredGithubRepos: [GithubRepositoryEntity] = []
+                    var totalCount: Int = 0
+                    
+                    if  let _mostStarredGithubRepos = responseJSON["items"].array,
+                        let _totalCount = responseJSON["total_count"].int{
+                        
+                        totalCount = _totalCount
                         
                         for _mostStarredGithubRepo in _mostStarredGithubRepos{
                             
@@ -40,7 +46,7 @@ class MostStarredGithubReposInteractor: PresenterToMostStarredGithubReposInterac
                         
                     }
                 
-                    self.presenter.mostStarredGithubReposSuccessFetch(repos: mostStarredGithubRepos, isToUsePullRefresh: isToUsePullRefresh)
+                    self.presenter.mostStarredGithubReposSuccessFetch(repos: mostStarredGithubRepos, isToUsePullRefresh: isToUsePullRefresh, totalCount: totalCount)
                 
                 
                 default:

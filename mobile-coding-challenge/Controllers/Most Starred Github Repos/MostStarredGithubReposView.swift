@@ -73,6 +73,18 @@ extension MostStarredGithubReposView: UITableViewDataSource, UITableViewDelegate
             repositoryNumberOfStars: mostStarredGithubRepo.getShortNumberOfStars()
         )
         
+        if indexPath.row == self.presenter.mostStarredGithubRepos.count - 1 {
+        
+            let totalNumberOfMostStarredGithubRepos = self.presenter.totalNumberOfMostStarredGithubRepos
+            
+            if totalNumberOfMostStarredGithubRepos != -1 && totalNumberOfMostStarredGithubRepos ?? -1 > self.presenter.mostStarredGithubRepos.count{
+                
+                self.presenter.interactor.getMostStarredGithubRepos(from: self.presenter.activePage, isToUsePullRefresh: false)
+                
+            }
+            
+        }
+        
         return mostStarredGithubReposCell
         
     }

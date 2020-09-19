@@ -23,6 +23,8 @@ protocol ViewToMostStarredGithubReposPresenterProtocol{
     var router: PresenterToMostStarredGithubReposRouterProtocol! { get set }
     var mostStarredGithubRepos: [GithubRepositoryEntity]! { get set }
     var numberOfRows: Int! { get }
+    var totalNumberOfMostStarredGithubRepos: Int! { get set }
+    var activePage: Int! { get set }
     func viewDidLoad()
 }
 
@@ -32,7 +34,7 @@ protocol PresenterToMostStarredGithubReposInteractorProtocol{
 }
 
 protocol InteractorToMostStarredGithubReposPresenterProtocol{
-    func mostStarredGithubReposSuccessFetch(repos: [GithubRepositoryEntity], isToUsePullRefresh: Bool)
+    func mostStarredGithubReposSuccessFetch(repos: [GithubRepositoryEntity], isToUsePullRefresh: Bool, totalCount: Int)
     func mostStarredGithubReposSuccessFailure()
 }
 

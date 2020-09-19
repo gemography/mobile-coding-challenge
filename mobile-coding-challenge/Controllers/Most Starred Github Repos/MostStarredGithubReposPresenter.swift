@@ -17,6 +17,8 @@ class MostStarredGithubReposPresenter: ViewToMostStarredGithubReposPresenterProt
     var numberOfRows: Int!{
         return self.mostStarredGithubRepos.count
     }
+    var totalNumberOfMostStarredGithubRepos: Int! = -1
+    var activePage: Int! = 1
     
     convenience init(view: PresenterToMostStarredGithubReposViewProtocol, interactor: PresenterToMostStarredGithubReposInteractorProtocol, router: PresenterToMostStarredGithubReposRouterProtocol) {
         self.init()
@@ -31,16 +33,19 @@ class MostStarredGithubReposPresenter: ViewToMostStarredGithubReposPresenterProt
         
         self.mostStarredGithubRepos = []
         self.view.showLoader()
-        self.interactor.getMostStarredGithubRepos(from: 1, isToUsePullRefresh: false)
+        self.interactor.getMostStarredGithubRepos(from: self.activePage, isToUsePullRefresh: false)
         
     }
     
-    func mostStarredGithubReposSuccessFetch(repos: [GithubRepositoryEntity], isToUsePullRefresh: Bool) {
+    func mostStarredGithubReposSuccessFetch(repos: [GithubRepositoryEntity], isToUsePullRefresh: Bool, totalCount: Int) {
+        
+        self.totalNumberOfMostStarredGithubRepos = totalCount
         
         if isToUsePullRefresh{
             self.mostStarredGithubRepos = repos
         }else{
             self.mostStarredGithubRepos.append(contentsOf: repos)
+            self.activePage += 1
         }
         
         self.view.hideLoader()
