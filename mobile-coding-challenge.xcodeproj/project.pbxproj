@@ -3,24 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		75620E3B2516548300F87394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E3A2516548300F87394 /* AppDelegate.swift */; };
 		75620E442516548700F87394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75620E432516548700F87394 /* Assets.xcassets */; };
 		75620E472516548700F87394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75620E452516548700F87394 /* LaunchScreen.storyboard */; };
-		75620E50251655BC00F87394 /* MostStarredGithubReposUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E4F251655BC00F87394 /* MostStarredGithubReposUI.swift */; };
-		75620E52251655D000F87394 /* MostStarredGithubReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E51251655D000F87394 /* MostStarredGithubReposView.swift */; };
 		75620E54251655E400F87394 /* MostStarredGithubReposProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E53251655E400F87394 /* MostStarredGithubReposProtocol.swift */; };
-		75620E56251655FF00F87394 /* MostStarredGithubReposInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E55251655FF00F87394 /* MostStarredGithubReposInteractor.swift */; };
-		75620E582516561800F87394 /* MostStarredGithubReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E572516561800F87394 /* MostStarredGithubReposPresenter.swift */; };
-		75620E5A2516562600F87394 /* MostStarredGithubReposEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E592516562600F87394 /* MostStarredGithubReposEntity.swift */; };
-		75620E5C2516563100F87394 /* MostStarredGithubReposRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E5B2516563100F87394 /* MostStarredGithubReposRouter.swift */; };
 		75620E5F251659B700F87394 /* BaseUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E5E251659B700F87394 /* BaseUINavigationController.swift */; };
+		75620E63251660A000F87394 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75620E62251660A000F87394 /* Localizable.strings */; };
+		75620E6825166EB800F87394 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E6725166EB800F87394 /* UIViewController + Extension.swift */; };
+		75620E6925166F1300F87394 /* MostStarredGithubReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E572516561800F87394 /* MostStarredGithubReposPresenter.swift */; };
+		75620E6A25166F8B00F87394 /* MostStarredGithubReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E51251655D000F87394 /* MostStarredGithubReposView.swift */; };
+		75620E6B25166FE300F87394 /* MostStarredGithubReposUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E4F251655BC00F87394 /* MostStarredGithubReposUI.swift */; };
+		75620E6C251670E400F87394 /* MostStarredGithubReposRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E5B2516563100F87394 /* MostStarredGithubReposRouter.swift */; };
+		75620E6D2516719900F87394 /* MostStarredGithubReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E602516602900F87394 /* MostStarredGithubReposTableViewCell.swift */; };
+		75620E6E251671BF00F87394 /* MostStarredGithubReposInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E55251655FF00F87394 /* MostStarredGithubReposInteractor.swift */; };
+		75620E70251677C200F87394 /* MostStarredGithubReposEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E592516562600F87394 /* MostStarredGithubReposEntity.swift */; };
+		75620E722516895A00F87394 /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E712516895A00F87394 /* Int + Extension.swift */; };
+		75620E742516987F00F87394 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E732516987F00F87394 /* String + Extension.swift */; };
+		7F2954C3013C6DFD1EB57D67 /* Pods_mobile_coding_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57D743DE22E5A3A3F84BF3F /* Pods_mobile_coding_challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F01CB3D02F0E5BDDFE0704F /* Pods-mobile-coding-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-coding-challenge.debug.xcconfig"; path = "Target Support Files/Pods-mobile-coding-challenge/Pods-mobile-coding-challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		4D18A88125FC096583B5DE6D /* Pods-mobile-coding-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-coding-challenge.release.xcconfig"; path = "Target Support Files/Pods-mobile-coding-challenge/Pods-mobile-coding-challenge.release.xcconfig"; sourceTree = "<group>"; };
 		75620E372516548300F87394 /* mobile-coding-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-coding-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75620E3A2516548300F87394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75620E432516548700F87394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +42,12 @@
 		75620E592516562600F87394 /* MostStarredGithubReposEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposEntity.swift; sourceTree = "<group>"; };
 		75620E5B2516563100F87394 /* MostStarredGithubReposRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposRouter.swift; sourceTree = "<group>"; };
 		75620E5E251659B700F87394 /* BaseUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUINavigationController.swift; sourceTree = "<group>"; };
+		75620E602516602900F87394 /* MostStarredGithubReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposTableViewCell.swift; sourceTree = "<group>"; };
+		75620E62251660A000F87394 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		75620E6725166EB800F87394 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		75620E712516895A00F87394 /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
+		75620E732516987F00F87394 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		F57D743DE22E5A3A3F84BF3F /* Pods_mobile_coding_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mobile_coding_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2954C3013C6DFD1EB57D67 /* Pods_mobile_coding_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +67,8 @@
 			children = (
 				75620E392516548300F87394 /* mobile-coding-challenge */,
 				75620E382516548300F87394 /* Products */,
+				958ADBB33EB7D44312ABB616 /* Pods */,
+				AC28514262F839DE19CD30B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +83,9 @@
 		75620E392516548300F87394 /* mobile-coding-challenge */ = {
 			isa = PBXGroup;
 			children = (
-				75620E5D2516597800F87394 /* Base Controllers */,
-				75620E4E2516557900F87394 /* Most Starred Github Repos */,
+				75620E64251660A800F87394 /* Localizable Files */,
+				75620E6625166E8D00F87394 /* Controllers */,
+				75620E6525166E7A00F87394 /* Extensions */,
 				75620E3A2516548300F87394 /* AppDelegate.swift */,
 				75620E432516548700F87394 /* Assets.xcassets */,
 				75620E452516548700F87394 /* LaunchScreen.storyboard */,
@@ -80,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				75620E4F251655BC00F87394 /* MostStarredGithubReposUI.swift */,
+				75620E602516602900F87394 /* MostStarredGithubReposTableViewCell.swift */,
 				75620E51251655D000F87394 /* MostStarredGithubReposView.swift */,
 				75620E53251655E400F87394 /* MostStarredGithubReposProtocol.swift */,
 				75620E55251655FF00F87394 /* MostStarredGithubReposInteractor.swift */,
@@ -98,6 +117,50 @@
 			path = "Base Controllers";
 			sourceTree = "<group>";
 		};
+		75620E64251660A800F87394 /* Localizable Files */ = {
+			isa = PBXGroup;
+			children = (
+				75620E62251660A000F87394 /* Localizable.strings */,
+			);
+			path = "Localizable Files";
+			sourceTree = "<group>";
+		};
+		75620E6525166E7A00F87394 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75620E6725166EB800F87394 /* UIViewController + Extension.swift */,
+				75620E712516895A00F87394 /* Int + Extension.swift */,
+				75620E732516987F00F87394 /* String + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		75620E6625166E8D00F87394 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75620E5D2516597800F87394 /* Base Controllers */,
+				75620E4E2516557900F87394 /* Most Starred Github Repos */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		958ADBB33EB7D44312ABB616 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F01CB3D02F0E5BDDFE0704F /* Pods-mobile-coding-challenge.debug.xcconfig */,
+				4D18A88125FC096583B5DE6D /* Pods-mobile-coding-challenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC28514262F839DE19CD30B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F57D743DE22E5A3A3F84BF3F /* Pods_mobile_coding_challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75620E4B2516548700F87394 /* Build configuration list for PBXNativeTarget "mobile-coding-challenge" */;
 			buildPhases = (
+				B02EBC2749D9FC5BBDB2C878 /* [CP] Check Pods Manifest.lock */,
 				75620E332516548300F87394 /* Sources */,
 				75620E342516548300F87394 /* Frameworks */,
 				75620E352516548300F87394 /* Resources */,
+				47EB194D8AC28AD0E4900581 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,26 +222,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				75620E472516548700F87394 /* LaunchScreen.storyboard in Resources */,
+				75620E63251660A000F87394 /* Localizable.strings in Resources */,
 				75620E442516548700F87394 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47EB194D8AC28AD0E4900581 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mobile-coding-challenge/Pods-mobile-coding-challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mobile-coding-challenge/Pods-mobile-coding-challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mobile-coding-challenge/Pods-mobile-coding-challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B02EBC2749D9FC5BBDB2C878 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mobile-coding-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75620E332516548300F87394 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75620E52251655D000F87394 /* MostStarredGithubReposView.swift in Sources */,
+				75620E6C251670E400F87394 /* MostStarredGithubReposRouter.swift in Sources */,
+				75620E70251677C200F87394 /* MostStarredGithubReposEntity.swift in Sources */,
+				75620E6825166EB800F87394 /* UIViewController + Extension.swift in Sources */,
 				75620E54251655E400F87394 /* MostStarredGithubReposProtocol.swift in Sources */,
-				75620E5C2516563100F87394 /* MostStarredGithubReposRouter.swift in Sources */,
 				75620E5F251659B700F87394 /* BaseUINavigationController.swift in Sources */,
-				75620E5A2516562600F87394 /* MostStarredGithubReposEntity.swift in Sources */,
-				75620E582516561800F87394 /* MostStarredGithubReposPresenter.swift in Sources */,
-				75620E56251655FF00F87394 /* MostStarredGithubReposInteractor.swift in Sources */,
+				75620E6B25166FE300F87394 /* MostStarredGithubReposUI.swift in Sources */,
+				75620E6E251671BF00F87394 /* MostStarredGithubReposInteractor.swift in Sources */,
+				75620E722516895A00F87394 /* Int + Extension.swift in Sources */,
+				75620E6925166F1300F87394 /* MostStarredGithubReposPresenter.swift in Sources */,
 				75620E3B2516548300F87394 /* AppDelegate.swift in Sources */,
-				75620E50251655BC00F87394 /* MostStarredGithubReposUI.swift in Sources */,
+				75620E742516987F00F87394 /* String + Extension.swift in Sources */,
+				75620E6D2516719900F87394 /* MostStarredGithubReposTableViewCell.swift in Sources */,
+				75620E6A25166F8B00F87394 /* MostStarredGithubReposView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +422,7 @@
 		};
 		75620E4C2516548700F87394 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F01CB3D02F0E5BDDFE0704F /* Pods-mobile-coding-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +441,7 @@
 		};
 		75620E4D2516548700F87394 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D18A88125FC096583B5DE6D /* Pods-mobile-coding-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
