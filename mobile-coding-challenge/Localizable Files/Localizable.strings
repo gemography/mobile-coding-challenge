@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  mobile-coding-challenge
+
+  Created by Mobile on 9/19/20.
+  Copyright © 2020 Zakariae. All rights reserved.
+*/
+
+//MARK: GENERAL
+
+"pull_to_refresh" = "Pull to refresh";
+
+"errors.something_went_wrong" = "Something went wrong";
+
+"ok" = "OK";
+
+//MARK: MOST STARRED GITHUB REPOS VIEW
+
+"mostStarredGithubRepos.trending_repos" = "Trending Repos";
+
+"mostStarredGithubRepos.errors.while_fetching_for_repos_description" = "Error while searching for the most starred github repos.\nPull to refresh or try again later";
