@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Mobile Coding Challenge by [Gemography](https://github.com/gemography)
 
 ## Idea of the App
