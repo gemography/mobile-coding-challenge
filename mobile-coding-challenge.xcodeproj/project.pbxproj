@@ -25,12 +25,30 @@
 		75620E742516987F00F87394 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E732516987F00F87394 /* String + Extension.swift */; };
 		75620E772516A8B800F87394 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E762516A8B800F87394 /* RequestHandler.swift */; };
 		75620E7A2516B5DF00F87394 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E782516B58B00F87394 /* Date + Extension.swift */; };
+		7572ADA625175C2500C8679A /* ShortValueOfIntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572ADA525175C2500C8679A /* ShortValueOfIntTests.swift */; };
+		7572ADA725175CBD00C8679A /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E712516895A00F87394 /* Int + Extension.swift */; };
+		7572ADA925175DA000C8679A /* MostStarredGithubReposJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572ADA825175DA000C8679A /* MostStarredGithubReposJSONTests.swift */; };
+		7572ADAA25175F2800C8679A /* MostStarredGithubReposEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E592516562600F87394 /* MostStarredGithubReposEntity.swift */; };
+		7572ADAB25175F3400C8679A /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E762516A8B800F87394 /* RequestHandler.swift */; };
+		7572ADAC251760B700C8679A /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75620E782516B58B00F87394 /* Date + Extension.swift */; };
 		7F2954C3013C6DFD1EB57D67 /* Pods_mobile_coding_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57D743DE22E5A3A3F84BF3F /* Pods_mobile_coding_challenge.framework */; };
+		A01CAA4FF1F4C7C6B5E2D638 /* libPods-mobile-coding-challenge-unit-tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F66A9D032FA7F46C709E77 /* libPods-mobile-coding-challenge-unit-tests.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7572ADA025175BAF00C8679A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75620E2F2516548300F87394 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75620E362516548300F87394;
+			remoteInfo = "mobile-coding-challenge";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0F01CB3D02F0E5BDDFE0704F /* Pods-mobile-coding-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-coding-challenge.debug.xcconfig"; path = "Target Support Files/Pods-mobile-coding-challenge/Pods-mobile-coding-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		4D18A88125FC096583B5DE6D /* Pods-mobile-coding-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-coding-challenge.release.xcconfig"; path = "Target Support Files/Pods-mobile-coding-challenge/Pods-mobile-coding-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		51F66A9D032FA7F46C709E77 /* libPods-mobile-coding-challenge-unit-tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mobile-coding-challenge-unit-tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75620E372516548300F87394 /* mobile-coding-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-coding-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75620E3A2516548300F87394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75620E432516548700F87394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +69,12 @@
 		75620E732516987F00F87394 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		75620E762516A8B800F87394 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		75620E782516B58B00F87394 /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
+		7572AD9B25175BAF00C8679A /* mobile-coding-challenge-unit-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-coding-challenge-unit-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7572AD9F25175BAF00C8679A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7572ADA525175C2500C8679A /* ShortValueOfIntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortValueOfIntTests.swift; sourceTree = "<group>"; };
+		7572ADA825175DA000C8679A /* MostStarredGithubReposJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostStarredGithubReposJSONTests.swift; sourceTree = "<group>"; };
+		A1A46AEB5C91E0ACBF4B1D5F /* Pods-mobile-coding-challenge-unit-tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-coding-challenge-unit-tests.debug.xcconfig"; path = "Target Support Files/Pods-mobile-coding-challenge-unit-tests/Pods-mobile-coding-challenge-unit-tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1CF037D9590E1CA8CBFC052 /* Pods-mobile-coding-challenge-unit-tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile-coding-challenge-unit-tests.release.xcconfig"; path = "Target Support Files/Pods-mobile-coding-challenge-unit-tests/Pods-mobile-coding-challenge-unit-tests.release.xcconfig"; sourceTree = "<group>"; };
 		F57D743DE22E5A3A3F84BF3F /* Pods_mobile_coding_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mobile_coding_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,6 +87,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7572AD9825175BAF00C8679A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01CAA4FF1F4C7C6B5E2D638 /* libPods-mobile-coding-challenge-unit-tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				75620E392516548300F87394 /* mobile-coding-challenge */,
+				7572AD9C25175BAF00C8679A /* mobile-coding-challenge-unit-tests */,
 				75620E382516548300F87394 /* Products */,
 				958ADBB33EB7D44312ABB616 /* Pods */,
 				AC28514262F839DE19CD30B2 /* Frameworks */,
@@ -80,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				75620E372516548300F87394 /* mobile-coding-challenge.app */,
+				7572AD9B25175BAF00C8679A /* mobile-coding-challenge-unit-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,11 +192,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		7572AD9C25175BAF00C8679A /* mobile-coding-challenge-unit-tests */ = {
+			isa = PBXGroup;
+			children = (
+				7572ADA825175DA000C8679A /* MostStarredGithubReposJSONTests.swift */,
+				7572ADA525175C2500C8679A /* ShortValueOfIntTests.swift */,
+				7572AD9F25175BAF00C8679A /* Info.plist */,
+			);
+			path = "mobile-coding-challenge-unit-tests";
+			sourceTree = "<group>";
+		};
 		958ADBB33EB7D44312ABB616 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0F01CB3D02F0E5BDDFE0704F /* Pods-mobile-coding-challenge.debug.xcconfig */,
 				4D18A88125FC096583B5DE6D /* Pods-mobile-coding-challenge.release.xcconfig */,
+				A1A46AEB5C91E0ACBF4B1D5F /* Pods-mobile-coding-challenge-unit-tests.debug.xcconfig */,
+				C1CF037D9590E1CA8CBFC052 /* Pods-mobile-coding-challenge-unit-tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -171,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				F57D743DE22E5A3A3F84BF3F /* Pods_mobile_coding_challenge.framework */,
+				51F66A9D032FA7F46C709E77 /* libPods-mobile-coding-challenge-unit-tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,6 +244,25 @@
 			productReference = 75620E372516548300F87394 /* mobile-coding-challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7572AD9A25175BAF00C8679A /* mobile-coding-challenge-unit-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7572ADA425175BAF00C8679A /* Build configuration list for PBXNativeTarget "mobile-coding-challenge-unit-tests" */;
+			buildPhases = (
+				DAD24B4F7197FA6D4240AF37 /* [CP] Check Pods Manifest.lock */,
+				7572AD9725175BAF00C8679A /* Sources */,
+				7572AD9825175BAF00C8679A /* Frameworks */,
+				7572AD9925175BAF00C8679A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7572ADA125175BAF00C8679A /* PBXTargetDependency */,
+			);
+			name = "mobile-coding-challenge-unit-tests";
+			productName = "mobile-coding-challenge-unit-tests";
+			productReference = 7572AD9B25175BAF00C8679A /* mobile-coding-challenge-unit-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,6 +275,10 @@
 				TargetAttributes = {
 					75620E362516548300F87394 = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					7572AD9A25175BAF00C8679A = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 75620E362516548300F87394;
 					};
 				};
 			};
@@ -226,6 +296,7 @@
 			projectRoot = "";
 			targets = (
 				75620E362516548300F87394 /* mobile-coding-challenge */,
+				7572AD9A25175BAF00C8679A /* mobile-coding-challenge-unit-tests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +309,13 @@
 				75620E472516548700F87394 /* LaunchScreen.storyboard in Resources */,
 				75620E63251660A000F87394 /* Localizable.strings in Resources */,
 				75620E442516548700F87394 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7572AD9925175BAF00C8679A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +361,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DAD24B4F7197FA6D4240AF37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mobile-coding-challenge-unit-tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -308,7 +408,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7572AD9725175BAF00C8679A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7572ADA625175C2500C8679A /* ShortValueOfIntTests.swift in Sources */,
+				7572ADAB25175F3400C8679A /* RequestHandler.swift in Sources */,
+				7572ADA725175CBD00C8679A /* Int + Extension.swift in Sources */,
+				7572ADAA25175F2800C8679A /* MostStarredGithubReposEntity.swift in Sources */,
+				7572ADA925175DA000C8679A /* MostStarredGithubReposJSONTests.swift in Sources */,
+				7572ADAC251760B700C8679A /* Date + Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7572ADA125175BAF00C8679A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75620E362516548300F87394 /* mobile-coding-challenge */;
+			targetProxy = 7572ADA025175BAF00C8679A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		75620E452516548700F87394 /* LaunchScreen.storyboard */ = {
@@ -474,6 +595,48 @@
 			};
 			name = Release;
 		};
+		7572ADA225175BAF00C8679A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A46AEB5C91E0ACBF4B1D5F /* Pods-mobile-coding-challenge-unit-tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mobile-coding-challenge-unit-tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zakariae.mobile-coding-challenge-unit-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobile-coding-challenge.app/mobile-coding-challenge";
+			};
+			name = Debug;
+		};
+		7572ADA325175BAF00C8679A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1CF037D9590E1CA8CBFC052 /* Pods-mobile-coding-challenge-unit-tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mobile-coding-challenge-unit-tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zakariae.mobile-coding-challenge-unit-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobile-coding-challenge.app/mobile-coding-challenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -491,6 +654,15 @@
 			buildConfigurations = (
 				75620E4C2516548700F87394 /* Debug */,
 				75620E4D2516548700F87394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7572ADA425175BAF00C8679A /* Build configuration list for PBXNativeTarget "mobile-coding-challenge-unit-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7572ADA225175BAF00C8679A /* Debug */,
+				7572ADA325175BAF00C8679A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

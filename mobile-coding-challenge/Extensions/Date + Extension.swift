@@ -6,7 +6,7 @@
 //  Copyright © 2020 Zakariae. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 extension Date{
     

@@ -12,7 +12,7 @@ extension Int{
     
     var shortValue: String{
         
-        let num : Double = Double(abs(self))
+        let num: Double = Double(abs(self))
 
         if (num < 1000.0){
             return "\(self)"
@@ -27,7 +27,7 @@ extension Int{
             return "\(sign)\(roundedNum)\(units[exp-1])"
         }
         
-        return "0"
+        return "+\(Int(roundedNum))..."
         
     }
     

@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Moya
-import SwiftyJSON
+import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,8 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = BaseUINavigationController(rootViewController: MostStarredGithubReposRouter.createModule())
         self.window?.makeKeyAndVisible()
         
+        self.clearKFCache()
+        
         return true
         
+    }
+    
+    private func clearKFCache(){
+        KingfisherManager.shared.cache.clearMemoryCache()
+        KingfisherManager.shared.cache.clearDiskCache()
+        KingfisherManager.shared.cache.cleanExpiredDiskCache()
     }
 
 

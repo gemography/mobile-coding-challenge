@@ -21,40 +21,41 @@ class MostStarredGithubReposInteractor: PresenterToMostStarredGithubReposInterac
         
             requestHandler.request(.getMostGithubRepos(created_at: previousMonthDate.formattedDate(using: "YYYY-MM-dd"), page: page)){ result in
             
-            switch result {
-                case let .success(moyaResponse):
-                    
-                    let responseJSON = JSON(moyaResponse.data)
-                    
-                    var mostStarredGithubRepos: [GithubRepositoryEntity] = []
-                    var totalCount: Int = 0
-                    
-                    if  let _mostStarredGithubRepos = responseJSON["items"].array,
-                        let _totalCount = responseJSON["total_count"].int{
+                switch result {
+                    case let .success(moyaResponse):
                         
-                        totalCount = _totalCount
+                        let responseJSON = JSON(moyaResponse.data)
                         
-                        for _mostStarredGithubRepo in _mostStarredGithubRepos{
+                        var mostStarredGithubRepos: [GithubRepositoryEntity] = []
+                        var totalCount: Int = 0
+                        
+                        if  let _mostStarredGithubRepos = responseJSON["items"].array,
+                            let _totalCount = responseJSON["total_count"].int{
                             
-                            if let mostStarredGithubRepo = GithubRepositoryEntity(from: _mostStarredGithubRepo){
+                            totalCount = _totalCount
+                            
+                            for _mostStarredGithubRepo in _mostStarredGithubRepos{
                                 
-                                mostStarredGithubRepos.append(mostStarredGithubRepo)
+                                if let mostStarredGithubRepo = GithubRepositoryEntity(from: _mostStarredGithubRepo){
+                                    
+                                    mostStarredGithubRepos.append(mostStarredGithubRepo)
+                                    
+                                }
                                 
                             }
                             
                         }
-                        
-                    }
                 
-                    self.presenter.mostStarredGithubReposSuccessFetch(repos: mostStarredGithubRepos, isToUsePullRefresh: isToUsePullRefresh, totalCount: totalCount)
-                
-                
-                default:
+                        self.presenter.mostStarredGithubReposSuccessFetch(repos: mostStarredGithubRepos, isToUsePullRefresh: isToUsePullRefresh, totalCount: totalCount)
                     
-                    self.presenter.mostStarredGithubReposSuccessFailure()
+                    
+                    default:
+                        
+                        self.presenter.mostStarredGithubReposSuccessFailure()
+                
+                }
                 
             }
-        }
             
             return
             

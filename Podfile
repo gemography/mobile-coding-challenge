@@ -10,5 +10,12 @@ target 'mobile-coding-challenge' do
   pod 'SwiftyJSON'
   pod 'Kingfisher'
 
+end
+
+target 'mobile-coding-challenge-unit-tests' do
+  inherit! :search_paths
+  
+  pod 'Moya'
+  pod 'SwiftyJSON'
 
 end
